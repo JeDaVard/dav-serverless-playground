@@ -26,12 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73681875-d6cc-4085-a2f6-fce80f8e39b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/commonMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/placeBid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iam/AuctionsTable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/iam/AuctionsTable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers/createAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/createAuction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/deleteAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/deleteAuction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers/getAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/getAuction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers/getAuctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/getAuctions.js" afterDir="false" />
     </list>
@@ -80,7 +80,7 @@
       <workItem from="1604859593991" duration="1133000" />
       <workItem from="1604901050343" duration="4308000" />
       <workItem from="1604933049810" duration="139000" />
-      <workItem from="1604933198703" duration="9753000" />
+      <workItem from="1604933198703" duration="11040000" />
     </task>
     <servers />
   </component>

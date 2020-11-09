@@ -17,8 +17,6 @@ async function getAuction(event) {
       })
       .promise();
 
-    console.log(JSON.stringify(auction));
-
     if (!auction)
       throw new createError.NotFound(
         `Auction with id: ${id} hasn't been found`
@@ -26,7 +24,7 @@ async function getAuction(event) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(auction.Items),
+      body: JSON.stringify(auction.Item),
     };
   } catch (e) {
     console.error(e);
