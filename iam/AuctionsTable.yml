@@ -4,7 +4,7 @@ AuctionsTableIAM:
     - dynamodb:PutItem
     - dynamodb:GetItem
     - dynamodb:DeleteItem
-    - dynamodb:PatchItem
+    - dynamodb:UpdateItem
     - dynamodb:Scan
   Resource:
     #        Fn::Join:

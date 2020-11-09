@@ -22,37 +22,7 @@ resources:
     AuctionsTable: ${file(resources/AuctionsTable.yml):AuctionsTable}
 
 
-functions:
-  createAuction:
-    handler: src/handlers/createAuction.handler
-    events:
-      - http:
-          method: POST
-          path: /auction
-  getAuctions:
-    handler: src/handlers/getAuctions.handler
-    events:
-      - http:
-          method: GET
-          path: /auctions
-  getAuction:
-    handler: src/handlers/getAuction.handler
-    events:
-      - http:
-          method: GET
-          path: /auction/{id}
-  deleteAuction:
-    handler: src/handlers/deleteAuction.handler
-    events:
-      - http:
-          method: DELETE
-          path: /auction/{id}
-  placeBid:
-    handler: src/handlers/placeBid.handler
-    events:
-      - http:
-          method: PATCH
-          path: /auction/{id}/bid
+functions: ${file(functions/functions.yml):Functions}
 
 custom:
   AuctionsTable:

@@ -1,6 +1,7 @@
 import AWS from 'aws-sdk';
 import createError from 'http-errors';
 import commonMiddleware from '../lib/commonMiddleware';
+import { getAuctionById } from './getAuction';
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
@@ -17,16 +18,17 @@ async function placeBid(event) {
     };
 
     try {
-        const auction = await dynamodb.update(params).promise();
-
-        if (!auction)
-            throw new createError.NotFound(
-                `Auction with id: ${id} hasn't been found`
+        const auction = getAuctionById(id);
+        if (auction.highest.amount >= amount)
+            throw new createError.BadRequest(
+                `New bid must be greater than the actual bid, so ${amount} is not greater than ${auction.highest.amount}`
             );
+
+        const updated = await dynamodb.update(params).promise();
 
         return {
             statusCode: 200,
-            body: JSON.stringify(auction.Item),
+            body: JSON.stringify(updated.Attributes),
         };
     } catch (e) {
         console.error(e);
