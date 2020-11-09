@@ -10,27 +10,45 @@ provider:
   runtime: nodejs12.x
   memorySize: 256
   stage: ${opt:stage, 'dev'}
+  environment:
+    AUCTIONS_TABLE_NAME: ${self:custom.AuctionsTable.name}
+  iamRoleStatements:
+    - ${file(iam/AuctionsTable.yml):AuctionsTableIAM}
   apiGateway:
     shouldStartNameWithService: true
 
 resources:
   Resources:
-    AuctionsTable:
-      Type: AWS::DynamoDB::Table
-      Properties:
-        TableName: AuctionsTable
-        BillingMode: PAY_PER_REQUEST
-        AttributeDefinitions:
-          - AttributeName: id
-            AttribiteType: S
-        KeySchema:
-          - AttributeName: id
-            KeyType: HASH
+    AuctionsTable: ${file(resources/AuctionsTable.yml):AuctionsTable}
+
 
 functions:
-  hello:
+  createAuction:
     handler: src/handlers/createAuction.handler
     events:
       - http:
           method: POST
           path: /auction
+  getAuctions:
+    handler: src/handlers/getAuctions.handler
+    events:
+      - http:
+          method: GET
+          path: /
+  getAuction:
+    handler: src/handlers/getAuction.handler
+    events:
+      - http:
+          method: GET
+          path: /auction/{id}
+  deleteAuction:
+    handler: src/handlers/deleteAuction.handler
+    events:
+      - http:
+          method: DELETE
+          path: /auction/{id}
+
+custom:
+  AuctionsTable:
+    name: !Ref AuctionsTable
+    arn: !GetAtt AuctionsTable.Arn
