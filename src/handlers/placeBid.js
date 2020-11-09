@@ -16,14 +16,14 @@ async function placeBid(event) {
         ExpressionAttributeValues: { ':amount': amount },
         ReturnValues: 'ALL_NEW',
     };
+    const { Item } = await getAuctionById(id);
+
+    if (Item.highest.amount >= amount)
+        throw new createError.BadRequest(
+            `New bid must be greater than the actual bid, so ${amount} is not greater than ${Item.highest.amount}`
+        );
 
     try {
-        const auction = getAuctionById(id);
-        if (auction.highest.amount >= amount)
-            throw new createError.BadRequest(
-                `New bid must be greater than the actual bid, so ${amount} is not greater than ${auction.highest.amount}`
-            );
-
         const updated = await dynamodb.update(params).promise();
 
         return {
