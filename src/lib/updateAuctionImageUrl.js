@@ -1,6 +1,6 @@
 import AWS from 'aws-sdk';
 
-const dynamodb = new AWS.DynamoDB();
+const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 export async function updateAuctionImageUrl(id, url) {
     const params = {

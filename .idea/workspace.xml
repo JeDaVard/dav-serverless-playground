@@ -27,8 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="73681875-d6cc-4085-a2f6-fce80f8e39b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/createAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/createAuction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/uploadAuctionPicture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/uploadAuctionPicture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/functions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/functions/functions.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/updateAuctionImageUrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/updateAuctionImageUrl.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <workItem from="1604933049810" duration="139000" />
       <workItem from="1604933198703" duration="13595000" />
       <workItem from="1604989018721" duration="6064000" />
-      <workItem from="1605071355223" duration="25382000" />
+      <workItem from="1605071355223" duration="25642000" />
     </task>
     <servers />
   </component>

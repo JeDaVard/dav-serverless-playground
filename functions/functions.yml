@@ -5,6 +5,7 @@ Functions:
     events:
       - http:
           method: POST
+          cors: true
           path: /auction
           authorizer: ${self:custom.Auth.authorizer}
 
@@ -13,6 +14,7 @@ Functions:
     events:
       - http:
           method: GET
+          cors: true
           path: /auctions
 
   getAuction:
@@ -20,6 +22,7 @@ Functions:
     events:
       - http:
           method: GET
+          cors: true
           path: /auction/{id}
 
   deleteAuction:
@@ -27,6 +30,7 @@ Functions:
     events:
       - http:
           method: DELETE
+          cors: true
           path: /auction/{id}
 
   placeBid:
@@ -34,6 +38,7 @@ Functions:
     events:
       - http:
           method: PATCH
+          cors: true
           path: /auction/{id}/bid
           authorizer: ${self:custom.Auth.authorizer}
 
@@ -42,6 +47,7 @@ Functions:
     events:
       - http:
           method: PATCH
+          cors: true
           path: /auction/{id}/picture
           authorizer: ${self:custom.Auth.authorizer}
 
