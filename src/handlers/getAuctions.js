@@ -9,8 +9,6 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 async function getAuctions(event, context) {
     let { status } = event.queryStringParameters;
-    status = status?.toUpperCase();
-    if (status !== 'OPEN' && status !== 'CLOSED') status = 'OPEN)';
 
     const params = {
         TableName: process.env.AUCTIONS_TABLE_NAME,
