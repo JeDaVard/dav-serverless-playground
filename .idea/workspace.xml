@@ -26,13 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73681875-d6cc-4085-a2f6-fce80f8e39b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/iam/AuctionsBucketIAM.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/AuctionsBucket.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/uploadAuctionPicture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/uploadPicture.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/schemas/uploadImageSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/updateAuctionImageUrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/functions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/functions/functions.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/createAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/createAuction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/uploadAuctionPicture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/uploadAuctionPicture.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/handlers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/schemas" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -67,6 +65,7 @@
       <recent name="$PROJECT_DIR$/src/lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/schemas" />
       <recent name="$PROJECT_DIR$/src/handlers" />
     </key>
   </component>
@@ -84,7 +83,7 @@
       <workItem from="1604933049810" duration="139000" />
       <workItem from="1604933198703" duration="13595000" />
       <workItem from="1604989018721" duration="6064000" />
-      <workItem from="1605071355223" duration="20722000" />
+      <workItem from="1605071355223" duration="24773000" />
     </task>
     <servers />
   </component>
