@@ -10,9 +10,13 @@ import uploadImageSchema from '../lib/schemas/uploadImageSchema';
 
 async function uploadAuctionPicture(event) {
     const { id } = event.pathParameters;
+    const { email } = event.requestContext.authorizer;
     const auction = await getAuctionById(id);
     const base64 = event.body.base64.replace(/^data:image\/\w+;base64,/, '');
     const buffer = Buffer.from(base64, 'base64');
+
+    if (auction.Item.seller !== email)
+        throw new createError.Forbidden(`It is no, no, no`);
 
     try {
         const uploadRes = await uploadPicture(
@@ -29,7 +33,7 @@ async function uploadAuctionPicture(event) {
             body: JSON.stringify(updated.Attributes),
         };
     } catch (e) {
-        // console.error(e);
+        console.error(e);
         throw new createError.InternalServerError(e);
     }
 }

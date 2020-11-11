@@ -6,14 +6,12 @@ export async function updateAuctionImageUrl(id, url) {
     const params = {
         TableName: process.env.AUCTIONS_TABLE_NAME,
         Key: { id },
-        UpdateExpression: 'set image = :image',
+        UpdateExpression: 'set imgUrl = :imgUrl',
         ExpressionAttributeValues: {
-            ':image': url,
+            ':imgUrl': url,
         },
         ReturnValues: 'ALL_NEW',
     };
 
-    console.log(params);
-
-    return dynamodb.updateItem(params).promise();
+    return dynamodb.update(params).promise();
 }
