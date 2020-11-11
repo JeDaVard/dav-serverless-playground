@@ -25,6 +25,8 @@ resources:
 functions: ${file(functions/functions.yml):Functions}
 
 custom:
+  Auth:
+    authorizer: arn:aws:lambda#{AWS::REGION}:#{AWS::AccountId}:function:dav-serverless-auth0-${self:provider.stage}-auth
   AuctionsTable:
     name: !Ref AuctionsTable
     arn: !GetAtt AuctionsTable.Arn

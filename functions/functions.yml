@@ -6,6 +6,7 @@ Functions:
       - http:
           method: POST
           path: /auction
+          authorizer: ${self:custom.Auth.authorizer}
 
   getAuctions:
     handler: src/handlers/getAuctions.handler
