@@ -7,7 +7,7 @@ async function processAuctions() {
 
     try {
         await Promise.allSettled(
-            auctionsToClose.map((auction) => closeAuction(auction.id))
+            auctionsToClose.map((auction) => closeAuction(auction))
         );
     } catch (e) {
         console.error(e);

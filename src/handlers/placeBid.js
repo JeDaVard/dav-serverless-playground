@@ -23,19 +23,17 @@ async function placeBid(event) {
     };
     const { Item } = await getAuctionById(id);
 
-    // Bid identity validation
-    if (email === Item.seller)
-        throw new createError.Forbidden(`You are already the highest bidder`);
-
-    // Avoid double bidding
-    if (email === Item.highest.bidder)
-        throw new createError.Forbidden(
-            `You can't bid more than once coninueslly`
-        );
-
     // Status validation
     if (Item.status === 'CLOSED')
         throw new createError.BadRequest(`This auction is closed`);
+
+    // Bid identity validation
+    if (email === Item.seller)
+        throw new createError.Forbidden(`You can't bit on your auction`);
+
+    // Avoid double bidding
+    if (email === Item.highest.bidder)
+        throw new createError.Forbidden(`You are already the highest bidder`);
 
     // Amount validation
     if (Item.highest.amount >= amount)
