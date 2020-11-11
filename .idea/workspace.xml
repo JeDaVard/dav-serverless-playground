@@ -26,8 +26,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73681875-d6cc-4085-a2f6-fce80f8e39b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/handlers/processAuctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/closeAuction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/getEndedAuctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/schemas/createAuctionSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/schemas/getAuctionsSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/schemas/placeBidSchema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/getAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/getAuction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/functions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/functions/functions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iam/AuctionsTable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/iam/AuctionsTable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/AuctionsTable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/AuctionsTable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/createAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/createAuction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/getAuctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/getAuctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers/placeBid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/placeBid.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +71,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/handlers" />
     </key>
@@ -75,7 +90,9 @@
       <workItem from="1604859593991" duration="1133000" />
       <workItem from="1604901050343" duration="4308000" />
       <workItem from="1604933049810" duration="139000" />
-      <workItem from="1604933198703" duration="13477000" />
+      <workItem from="1604933198703" duration="13595000" />
+      <workItem from="1604989018721" duration="6064000" />
+      <workItem from="1605071355223" duration="9420000" />
     </task>
     <servers />
   </component>
@@ -104,12 +121,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="202" y="58" key="SettingsEditor" timestamp="1604947061672">
+    <state x="184" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605084763248">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="202" y="58" key="SettingsEditor/-1440.0.1440.900/0.0.1440.900@0.0.1440.900" timestamp="1604947061672" />
+    <state x="184" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.0.1440.900/0.0.1440.900@0.0.1440.900" timestamp="1605084763248" />
+    <state x="410" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605099795424">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="410" y="247" key="#com.intellij.fileTypes.FileTypeChooser/-1440.0.1440.900/0.0.1440.900@0.0.1440.900" timestamp="1605099795424" />
+    <state x="202" y="58" key="SettingsEditor" timestamp="1604995131969">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="202" y="58" key="SettingsEditor/-1440.0.1440.900/0.0.1440.900@0.0.1440.900" timestamp="1604995131969" />
     <state x="202" y="58" key="SettingsEditor/-1440.25.1440.875/0.0.1440.900@0.0.1440.900" timestamp="1604933583552" />
   </component>
 </project>

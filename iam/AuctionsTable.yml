@@ -6,6 +6,7 @@ AuctionsTableIAM:
     - dynamodb:DeleteItem
     - dynamodb:UpdateItem
     - dynamodb:Scan
+    - dynamodb:Query
   Resource:
     #        Fn::Join:
     #            - ''
@@ -13,3 +14,4 @@ AuctionsTableIAM:
     #              - Ref: AuctionsTable
 #    - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/AuctionsTable
     - ${self:custom.AuctionsTable.arn}
+    - !Join ['/', ['${self:custom.AuctionsTable.arn}', 'index', 'statusAndEndDate']]
